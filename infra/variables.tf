@@ -1,6 +1,6 @@
 variable "project" { type = string, default = "autoheal-web" }
 variable "env"     { type = string, default = "dev" }
-variable "owner"   { type = string, default = "candidate" }
+variable "owner"   { type = string, default = "siliney" }
 
 variable "location" {
   type    = string
