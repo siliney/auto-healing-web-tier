@@ -1,0 +1,10 @@
+#cloud-config
+package_update: true
+packages:
+  - docker.io
+
+runcmd:
+  - systemctl enable docker
+  - systemctl start docker
+  - docker pull ${image}
+  - docker run -d --restart=always -p 80:80 ${image}

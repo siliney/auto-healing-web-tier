@@ -1,0 +1,7 @@
+flowchart LR
+  user((User)) --> pip[Public IP]
+  pip --> lb[Azure Standard Load Balancer]
+  lb -->|Health probe /| vmss[VM Scale Set (2 instances)]
+  vmss --> nginx1[NGINX]
+  vmss --> nginx2[NGINX]
+  vmss --> vnet[VNet/Subnet + NSG]
