@@ -16,6 +16,8 @@ Azure VM Scale Sets provide native auto-scaling/rolling upgrades and **Automatic
 - Azure CLI logged in (`az login`)
 - An Azure subscription
 - SSH public key at `~/.ssh/id_rsa.pub` (or change var)
+- In Azure CloudShell make sure you connect to storage account
+- Upload the project file (zip) and unzip it (unzip *.zip)
 
 ## Run (plan)
 ```bash
