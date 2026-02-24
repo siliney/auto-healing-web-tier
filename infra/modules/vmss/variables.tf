@@ -15,3 +15,7 @@ variable "ssh_public_key"  { type = string }
 variable "cloud_init" { type = string }
 
 variable "tags" { type = map(string) }
+
+variable "health_probe_id" {
+  type = string
+}

@@ -29,15 +29,15 @@ module "vmss" {
 
   subnet_id           = module.network.subnet_id
   backend_pool_id     = module.lb.backend_pool_id
-
+  health_probe_id = module.lb.health_probe_id
   instance_count      = var.instance_count
   vm_sku              = var.vm_sku
   admin_username      = var.admin_username
-  ssh_public_key      = file(var.ssh_public_key_path)
+  ssh_public_key      = file("${var.ssh_public_key_path}")
 
-  cloud_init = var.use_docker
+  cloud_init = (var.use_docker
     ? templatefile("${path.module}/cloud-init/docker.yaml", { image = var.container_image })
-    : file("${path.module}/cloud-init/nginx.yaml")
+    : file("${path.module}/cloud-init/nginx.yaml"))
 
   tags = local.tags
 }

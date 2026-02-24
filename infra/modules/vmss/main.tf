@@ -5,6 +5,7 @@ resource "azurerm_linux_virtual_machine_scale_set" "vmss" {
   sku                 = var.vm_sku
   instances           = var.instance_count
   admin_username      = var.admin_username
+  health_probe_id = var.health_probe_id
 
   upgrade_mode = "Automatic"
 
