@@ -24,6 +24,6 @@ jobs:
 
       - name: Build and Push
         run: |
-          IMAGE=ghcr.io/${{ github.repository_owner }}/autoheal-web:latest
+          IMAGE=ghcr.io/${{ github.repository_owner }}/auto-healing-web-tier:latest
           docker build -t $IMAGE .
           docker push $IMAGE
