@@ -12,34 +12,8 @@ Azure VM Scale Sets provide native auto-scaling/rolling upgrades and **Automatic
 - VMSS Automatic Instance Repairs enabled with grace period
 
 ## Terraform File Structure
-azure-autohealing-webtier/
-├─ README.md
-├─ diagrams/
-│  └─ architecture.mmd
-├─ infra/
-│  ├─ versions.tf
-│  ├─ providers.tf
-│  ├─ main.tf
-│  ├─ variables.tf
-│  ├─ outputs.tf
-│  ├─ locals.tf
-│  ├─ cloud-init/
-│  │  ├─ nginx.yaml
-│  │  └─ docker.yaml          # (bonus option)
-│  └─ modules/
-│     ├─ network/
-│     │  ├─ main.tf
-│     │  ├─ variables.tf
-│     │  └─ outputs.tf
-│     ├─ lb/
-│     │  ├─ main.tf
-│     │  ├─ variables.tf
-│     │  └─ outputs.tf
-│     └─ vmss/
-│        ├─ main.tf
-│        ├─ variables.tf
-│        └─ outputs.tf
-└─ .github/workflows/terraform.yml   # optional pipeline
+![Architecture Diagram](diagrams/architecture.png)
+
 
 ## Prerequisites
 - Terraform >= 1.6
