@@ -11,11 +11,17 @@ Azure VM Scale Sets provide native auto-scaling/rolling upgrades and **Automatic
 - VMSS installs NGINX via cloud-init (default welcome page)
 - VMSS Automatic Instance Repairs enabled with grace period
 
+## Terraform File Structure
+![Architecture Diagram](diagrams/architecture.png)
+
+
 ## Prerequisites
 - Terraform >= 1.6
 - Azure CLI logged in (`az login`)
 - An Azure subscription
 - SSH public key at `~/.ssh/id_rsa.pub` (or change var)
+- In Azure CloudShell make sure you connect to storage account
+- Upload the project file (zip) and unzip it (unzip *.zip)
 
 ## Run (plan)
 ```bash
